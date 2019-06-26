@@ -7,7 +7,7 @@ I chose to preprocess the data in python3 using pandas and then store the datafr
 
 I have a windows PC and git bash has been finicky for unix terminal operations for me so I chose to write this pipeline almost exclusively in python, run through Spyder / Ipython. With more time, I would like to test this dataset in an Ubuntu virtualmachine and run it through a unix terminal.
 
-Additionally, with more time I would have liked to write a test suite for unit testing.
+Additionally, with more time I would like to write a test suite for unit testing.
 
 ## Requirements
 This pipeline requires python3 and postgres
@@ -25,7 +25,8 @@ sqlalchemy
 
 **The following python packages are required for equitydata_query.py**:  
 configparser  
-sqlalchemy    
+sqlalchemy  
+csv  
 
 ## Config
 You will need to create a .ini file as a config with the following sections:
@@ -84,6 +85,6 @@ If the parameter dosql in the config section of the .ini file is 0, the preproce
 ## Query (equitydata_query.py)
 NOTE: This is only necessary if the dosql parameter of the config section is 1  
 
-A python script to do additional data preprocessing and factor binning using SQL queries, query the average of the outcome variable by the binned factors, and display the outputs (if run in a python interpreter).
+A python script to do additional data preprocessing for the SQL table, and query the average of the outcome variable by the binned factor, and output the results to a csv in the main directory.
 
 I chose to use sqlalchemy for connecting to the postgres database and querying, mainly to get more experience with sqlalchemy. Ultimately I used it as a raw connector more like how one would use psycopg2. With more time, I would like to have used sqlalchemy more for its Object Relational Mapping (ORM).

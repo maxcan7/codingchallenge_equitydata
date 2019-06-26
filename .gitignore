@@ -4,3 +4,6 @@ src/equitydata_process_allpython_incomplete.py
 configpath.py
 __pycache__/*
 desktop.ini
+Mkt Cap_bins.csv
+Date_bins.csv
+mktcap_bins_SQL.csv

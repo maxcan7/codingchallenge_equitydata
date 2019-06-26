@@ -10,34 +10,34 @@ I have a windows PC and git bash has been finicky for unix terminal operations f
 ## Config
 You will need to create a .ini file as a config with the following sections:
 
-**[config]**
-mainpath=path to cloned directory
-datapath=path to zipped data file
-factors=which variables in your dataset to use as factors
-outcome=Returns
-bins=the number of bins to separate each factor into
+**[config]**  
+mainpath=path to cloned directory  
+datapath=path to zipped data file  
+factors=which variables in your dataset to use as factors  
+outcome=Returns  
+bins=the number of bins to separate each factor into  
 
-**[createdb]**
-defaultdb=the default database to connect
-port=the port for that database
-user=preferred postgres user
-password=postgres password
-host=127.0.0.1 or server address
+**[createdb]**  
+defaultdb=the default database to connect  
+port=the port for that database  
+user=preferred postgres user  
+password=postgres password  
+host=127.0.0.1 or server address  
 
-**[postgresql]**
-host=localhost or server name
-database=equitydata_db
-user=preferred postgres user
-password=postgres password
-engine=postgresql://USER:PASSWORD@HOST/equitydata_db
-engine is used for SQLalchemy, the other parameters are used for psycopg2
+**[postgresql]**  
+host=localhost or server name  
+database=equitydata_db  
+user=preferred postgres user  
+password=postgres password  
+engine=postgresql://USER:PASSWORD@HOST/equitydata_db  
+engine is used for SQLalchemy, the other parameters are used for psycopg2  
 
-**configpath.py**
+**configpath.py**  
 A python script that only contains a string with the path for the .ini file. My .ini file is in the main directory but it should be flexible.
 
-example:
-'your preferred python shebang'
-configpath = "path/configname.ini"
+example:  
+'your preferred python shebang'  
+configpath = "path/configname.ini"  
 
 ## Create Database (equitydata_createdb.py)
 A python script that uses psycopg2 to create the new equitydata_db database in postgres using the info provided in the .ini file "[createdb]" section. I chose to use psycopg2 here based on prior familiarity.

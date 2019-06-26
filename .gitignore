@@ -1,0 +1,5 @@
+data/equity_data.zip
+equitydata_config.ini
+src/equitydata_process_allpython_incomplete.py
+configpath.py
+__pycache__/*

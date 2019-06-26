@@ -7,6 +7,23 @@ I chose to preprocess the data in python3 using pandas and then store the datafr
 
 I have a windows PC and git bash has been finicky for unix terminal operations for me so I chose to write this pipeline almost exclusively in python, run through Spyder / Ipython. With more time, I would like to test this dataset in an Ubuntu virtualmachine and run it through a unix terminal.
 
+## Requirements
+This pipeline requires python3 and postgres
+
+**The following python packages are requred for equitydata_createdb.py**:  
+configparser  
+psycopg2  
+
+**The following python packages are requred for equitydata_preprocess.py**:  
+zipfile  
+configparser  
+pandas  
+sqlalchemy  
+
+**The following python packages are requred for equitydata_query.py**:  
+configparser  
+sqlalchemy    
+
 ## Config
 You will need to create a .ini file as a config with the following sections:
 
